@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Article{% endblock %}
+
+{% block body %}
+    <h1>Edit Article</h1>
+
+    {{ include('article/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <div style="display: flex; justify-content: flex-start; width: 100%" class="create-view">
+        <a href="{{ path('article_index') }}">back to list</a>
+    </div>
+
+    <div style="display: flex; justify-content: flex-start; width: 100%" class="create-view">
+        {{ include('article/_delete_form.html.twig') }}
+    </div>
+{% endblock %}
